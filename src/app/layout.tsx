@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistSans.variable}`}>
-        <div className="text-2xl font-mono text-rose-400">First Layout</div> 
+        <div className="text-2xl font-mono text-rose-400 border-8 border-indigo-600 bg-green-400">First Layout</div> 
         <button className="btn btn-secondary btn-lg btn circle">Secondary</button>
         {children}
       </body>
