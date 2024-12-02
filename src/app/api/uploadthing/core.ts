@@ -27,8 +27,8 @@ export const ourFileRouter = {
       console.log("file url", file.url);
 
       await db.insert(images).values({
-        name: file.name,
-        url:file.url,
+        name: String(file.name),
+        url: String(file.url),
         userId: String(metadata.userId),
       })
 
