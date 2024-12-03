@@ -17,13 +17,13 @@ import {
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
 export const createTable = pgTableCreator((name) => `pd1pgr2do_${name}`);
-``
+
 export const images = createTable(
   "image",
   {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 256 }). notNull(),
-    url: varchar("url", {length: 1024}) .notNull(),
+    url: varchar("url", {length: 1024}).notNull(),
     userId: varchar("userId",{length: 256}).notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
